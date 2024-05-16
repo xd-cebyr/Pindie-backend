@@ -17,7 +17,7 @@ const {
   findAllCategories,
   findCategoryById,
 } = require("../middlewares/categories");
-const checkAuth = require("../middlewares/auth.js");
+const { checkAuth } = require("../middlewares/auth.js");
 
 categoriesRouter.get("/categories", findAllCategories, sendAllCategories);
 categoriesRouter.get("/categories/:id", findCategoryById, sendCategoryById);

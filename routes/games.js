@@ -18,7 +18,7 @@ const {
   createGame,
   checkIsVoteRequest,
 } = require("../middlewares/games");
-const checkAuth = require("../middlewares/auth.js");
+const { checkAuth } = require("../middlewares/auth");
 
 gamesRouter.get("/games", findAllGames, sendAllGames);
 gamesRouter.post(

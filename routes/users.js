@@ -19,7 +19,7 @@ const {
   findAllUsers,
   findUserById,
 } = require("../middlewares/users");
-const checkAuth = require("../middlewares/auth.js");
+const { checkAuth } = require("../middlewares/auth.js");
 
 usersRouter.get("/users", findAllUsers, sendAllUsers);
 usersRouter.get("/me", checkAuth, sendMe);
